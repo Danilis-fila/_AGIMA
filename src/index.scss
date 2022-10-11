@@ -1,0 +1,86 @@
+/*         Обнуление         */
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+/*--------------------*/
+
+$color: #01AC6A;
+
+@font-face {
+  font-family: "NHaasGroteskDSStd-65Md";
+  src: url("../src/fonts/NHaasGroteskDSStd-65Md.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "NHaasGroteskDSStd-75Bd";
+  src: url("../src/fonts/NHaasGroteskDSStd-75Bd.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url("../src/fonts/Gilroy-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url("../src/fonts/Gilroy-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gilroy-ExtraBold";
+  src: url("../src/fonts/Gilroy-ExtraBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gilroy-Black";
+  src: url("../src/fonts/Gilroy-Black.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gilroy-Regular";
+  src: url("../src/fonts/Gilroy-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gilroy-SemiBold";
+  src: url("../src/fonts/Gilroy-SemiBold.woff2") format("woff2");
+}
+
+::selection {
+  background-color: #01AC6A;
+  color: #fff;
+}
+
+html {
+    font-family: Gilroy, sans-serif;
+    line-height: 1.2;
+    color: #202020;
+  }
+  
+  a {
+    color: #202020;
+    &:active {
+      color: #202020;
+    }
+  }
+
+  .animate-view {
+    transform: translateY(80px);
+  }
+  
+  .is-ready {
+    transform: translateY(0) ;
+    transition: transform .6s;
+  }

@@ -1,0 +1,208 @@
+.work {
+  margin: 0 3.125% 110px 9%;
+
+  &__wrap {
+    display: flex;
+  }
+
+  &__left-box {
+    width: 49%;
+  }
+
+  &__title {
+    font-size: 57px;
+    line-height: 145.6%;
+    font-family: 'Gilroy-Bold';
+    margin: 0 0 25px -0.05em;
+  }
+
+  &__text {
+    font-size: 26px;
+    line-height: 142.3%;
+    margin: 0 0 33px -0.05em;
+    font-weight: 600;
+  }
+
+  &__link {
+    font-size: 26px;
+    font-weight: 700;
+    color: #01ac6a;
+    margin: 0 0 0 -0.05em;
+
+    &:hover {
+      color: #202020;
+      transition: color .5s, transform .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+  }
+
+  &__right-box {
+    width: 60%;
+    padding: 25px 0 0;
+    margin-left: 9%;
+  }
+
+  &__vacancies {
+    margin: 0 0 65px 0;
+  }
+
+  &__vacancy {
+    margin: 0 0 50px;
+    font-family: 'Gilroy-Medium';
+
+    a {
+      font-size: 26px;
+
+      &:hover {
+        color: #01AC6A;
+        transition: color .5s, transform .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+    }
+  }
+
+  &__more {
+    color: #01AC6A;
+    font-size: 16px;
+    
+    svg {
+      margin-left: 16px;
+      vertical-align: -5%;
+      width: 38px;
+      height: 12px;
+      fill: #202020;
+
+      transition: margin .5s cubic-bezier(0.06, 0.34, 0.8, 1.07), fill .5s cubic-bezier(.075, .82, .165, 1);
+    }
+
+    &:hover {
+      svg {
+        fill: #01AC6A;
+        margin: 0 0 0 25px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1439px) {
+  .work {
+    &__title {
+      font-size: 44px;
+      margin-bottom: 17px;
+    }
+
+    &__text {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+
+    &__link {
+      font-size: 20px;
+    }
+
+    &__right-box {
+      padding: 13px 0 0;
+    }
+
+    &__vacancy {
+      margin: 0 0 37px;
+      
+      a {
+        font-size: 20px;
+      }
+    }
+
+    &__vacancies {
+      margin: 0 0 57px;
+    }
+
+    &__more {
+      font-size: 12px;
+      
+      svg {
+        width: 27px;
+        height: 10px;
+      }
+
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .work {
+    margin: 0 3.2% 90px 7.1%;;
+
+    &__title {
+      font-size: 42px;
+      line-height: 145.2%;
+      margin: 0 0 10px -0.05em;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 143.75%;
+      margin: 0 0 20px -0.05em;
+    }
+
+    &__link {
+      font-size: 16px;
+    }
+
+    &__vacancies {
+      font-size: 16px;
+      line-height: 143.75%;
+      margin: 0 0 37px;
+    }
+
+    &__vacancy {
+      margin: 0 0 32px;
+      a {
+        font-size: 16px;
+      }
+    }
+
+    &__right-box {
+      margin-left: 12%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .work {
+
+    margin: 0 2.6% 63px 8%;
+
+    &__wrap {
+      display: block;
+    }
+
+    &__left-box {
+      width: 100%;
+      margin-bottom: 60px;
+    }
+
+    &__right-box {
+      width: 100%;
+      margin: 0;
+    }
+
+    &__vacancies {
+      margin-bottom: 34px;
+    }
+
+    &__title {
+      font-size: 34px;
+      line-height: 144.1176470588%;
+      margin: 0 0 25px -0.05em;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 150%;
+      margin: 0 0 19px -0.05em;
+    }
+
+    &__link {
+      font-size: 14px;
+    }
+  }
+}

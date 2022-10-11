@@ -1,0 +1,180 @@
+.background {
+    z-index: 1;
+    width: 100%;
+    background-color: #01AC6A;
+    padding-top: 90px;
+    font-weight: 800;
+    letter-spacing: -.01em;
+    height: 100vh;
+    position: fixed;
+    display: block;
+    top: 0;
+
+    &__title {
+      color: #fff;
+      margin: 14.7% 0 0 5.2%;
+      font-family: 'Gilroy-ExtraBold';
+      font-size: 90px;
+      line-height: 1.1;
+      letter-spacing: -.01em;
+      transform: translateX(-3em);
+      opacity: 0;
+      transition: transform .8s 1s cubic-bezier(0, 0.54, 0.44, 0.85), opacity .8s 1s cubic-bezier(0, 0.54, 0.44, 0.85);
+
+      &--ready {
+        transform: translateX(0em);
+        opacity: 1;
+      }
+    }
+
+    &__ul {
+      margin-top: 9px;
+      display: flex;
+      li {
+        color: #fff;
+        animation: wave 1s  linear;
+
+        @for $i from 1 through  15 {
+          &:nth-child(#{$i}) {
+            animation-delay: calc(#{$i}s / 10 + 2s);
+          }
+        }
+      }
+    }
+  
+    &__tags {
+      font-size: 32px;
+      color: #fff;
+      margin: 6.6% 0 0 5.55%;
+      display: inline-block;
+      font-family: 'Gilroy-ExtraBold';
+      transform: translateY(-30px);
+      opacity: 0;
+      transition: transform .8s 1s cubic-bezier(0, 0.54, 0.44, 0.85), opacity .8s 1s cubic-bezier(0, 0.54, 0.44, 0.85);
+
+      &--ready {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+    }
+  
+    &__tags-item {
+      margin-right: 2px;
+      display: inline-block;
+
+      animation: waveTags 1s  linear;
+
+      @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+          animation-delay: calc(#{$i}s / 4 + .1s);
+        }
+      }
+
+      &::after {
+        content: ",";
+      }
+
+      &--new {
+        &::after {
+          z-index: 0;
+          content: "";
+          width: 8px;
+          height: 8px;
+          background: #fbe10f;
+          border-radius: 50%;
+          position: absolute;
+          margin: -3px 0 0 2px;
+    
+        }
+      }
+    }
+  
+
+    &__img {
+      position: absolute;
+      bottom: 12.3%;
+      right: 3.1%;
+      display: block;
+      width: 31px;
+      height: 54px;
+      background: url('https://www.agima.ru/local/markup/build/assets/img/svg/to-next-screen.svg') no-repeat 0 0;
+      cursor: pointer;
+    }
+  }
+
+  @keyframes wave {
+    from {
+      color: #fff;
+    }
+    to {
+      color: #202020;
+    }
+  }
+
+  @keyframes waveTags {
+    from {
+      transform: translateY(-30px);
+    }
+    to {
+      transform: translateY(0px);
+    }
+  }
+
+  @media (max-width: 1439px) {
+    .background {
+      &__title {
+        font-size: 72px;
+      }
+
+      &__img {
+        width: 27.5px;
+        height: 48px;
+      }
+
+      h1 {
+        margin: 0 0 10vh 0;
+      }
+
+      &__tags{
+        margin-top: 0;
+        font-size: 26px;
+      }
+    }
+  }
+
+  
+  @media (max-width: 1023px) {
+    .background {
+      &__title {
+        font-size: 68px;
+        margin-left: 3%;
+      }
+
+      &__img {
+        visibility: hidden;
+      }
+    }
+  }
+  
+
+  @media (max-width: 767px) {
+    .background {
+      position: static;
+
+      &__title {
+        font-size: 42px;
+        line-height: 1.14;
+        margin-top: 18%;
+        margin-left: 50px;
+
+        ul {
+          margin-top: 0;
+        }
+      }
+
+      &__tags {
+        margin-left: 50px;
+        margin-top: 22px;
+      }
+    }
+  }

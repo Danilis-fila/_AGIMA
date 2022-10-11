@@ -1,0 +1,184 @@
+.promo {
+  width: 100%;
+  height: 343.6px;
+  margin-bottom: 80px;
+
+  &__wrap {
+    width: auto;
+    height: 343.600px;
+    margin: 0 3.125% 0 5.5%;
+    display: flex;
+    background-color: #01AC6A;
+  }
+
+  &__left {
+    padding: 35px 0 35px 35px;
+  }
+
+  &__center {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    margin-left: 25px;
+    margin-right: 35px;
+  }
+
+  &__right {
+    width: 250px;
+    height: 100%;
+  }
+
+  &__img {
+    display: block;
+    width: 250px;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    background-repeat: round;
+    background-size: cover;
+    background-image: url('../../../../public/images/Andrey-photo.jpg');
+  }
+
+  &__left-title {
+    color: #fff;
+    font-size: 44px;
+    line-height: 53px;
+    max-width: 286px;
+    margin-bottom: 40px;
+    font-weight: 700;
+    letter-spacing: .01em;
+
+    span {
+      color: #202020;
+    }
+  }
+
+  &__center-title {
+    color: #fff;
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  &__center-text {
+    font-size: 15px;
+    line-height: 26px;
+    color: #fff;
+  }
+}
+
+.button-read-more {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: .01em;
+  color: #fff;
+  transition: color 0.8s, transform 0.8s cubic-bezier(.785, .135, .15, .86);
+
+  &:hover {
+    color: #202020;
+
+    svg {
+      margin: 0 0 0 25px;
+    }
+  }
+
+  svg {
+    margin-left: 16px;
+    vertical-align: -5%;
+    width: 38px;
+    height: 12px;
+    fill: #202020;
+    transition: margin 0.5s, transform 0.5s cubic-bezier(0.06, 0.34, 0.8, 1.07);
+  }
+}
+
+@media (max-width: 1023px) {
+  .promo {
+    &__right {
+      img {
+        width: 200px;
+      }
+    }
+
+    &__wrap {
+      margin-left: 3%;
+    }
+  }
+
+  .button-read-more {
+    font-size: 12px;
+    svg {
+      width: 27px;
+      height: 10px;
+      margin-left: 10px;
+    }
+  }
+}
+
+@media (max-width: 810px) {
+  .promo {
+    height: fit-content;
+
+    &__wrap {
+      height: fit-content;
+      flex-direction: column;
+    }
+
+    &__left {
+      width: 100%;
+    }
+
+    &__left-title {
+      max-width: initial;
+    }
+
+    &__right {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .promo {
+    margin-bottom: 60px;
+
+    &__right {
+      height: 310px;
+    }
+
+    &__left {
+      padding: 30px 20px 40px;
+    }
+
+    &__left-title {
+      font-size: 34px;
+      line-height: 41px;
+      margin-bottom: 25px;
+    }
+
+    &__center {
+      padding-top: 0;
+      padding-bottom: 40px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    &__center-title {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 16px;
+    }
+
+    &__center-text {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}

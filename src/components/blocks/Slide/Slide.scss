@@ -1,0 +1,95 @@
+.slide {
+  width: 88%;
+  height: 455px;
+  margin: 0 0 0 5.5%;
+  background-color: #fff;
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+  opacity: 0;
+
+  &--active {
+    opacity: 1;
+  }
+
+  & i {
+    position: absolute;
+    top: 48px;
+    right: 83px;
+    font-style: normal;
+    width: 0;
+    font-family: 'NHaasGroteskDSStd-75Bd';
+    font-size: 280px;
+    line-height: 1;
+    font-weight: 700;
+    color: #01ac6a;
+    pointer-events: none;
+  }
+
+  &__title {
+    position: absolute;
+    top: 65px;
+    left: 4%;
+    font-size: 57px;
+    line-height: 121%;
+    letter-spacing: .01em;
+    color: #202020;
+
+    &:hover {
+      color: #01AC6A;
+      transition: color 0.8s, transform 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+  }
+
+  &__button {
+    position: absolute;
+    color: #01AC6A;
+    left: 4%;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .01em;
+    bottom: 13%;
+    transition: color 0.8s, transform 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover {
+      color: #202020;
+
+      svg {
+        margin: 0 0 0 25px;
+      }
+    }
+
+    & svg {
+      display: inline-block;
+      vertical-align: -3%;
+      width: 38px;
+      height: 12px;
+      fill: #202020;
+      margin: 0 0 0 17px;
+      transition: margin 0.8s, transform 0.8s cubic-bezier(0.06, 0.34, 0.8, 1.07);
+    }
+  }
+
+  &__description {
+    padding: 78px 15.9% 0 38.7%;
+  }
+
+  &__description-title {
+    width: 90%;
+    display: block;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    line-height: 153.3%;
+
+    &:hover {
+      color: #01AC6A;
+      transition: color 0.8s, transform 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+  }
+
+  &__description-text {
+    font-size: 19px;
+    line-height: 168.4%;
+  }
+}

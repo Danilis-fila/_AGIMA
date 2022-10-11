@@ -1,0 +1,152 @@
+.blogs {
+  padding: 60px 3.1% 0 3.4%;
+  margin: 0 0 83px 5.5%;
+  background-color: #fff;
+
+  :nth-child(3) {
+    margin-right: 0;
+  }
+
+  &__title {
+    font-family: 'Gilroy-Bold';
+    font-size: 57px;
+    margin: 0 0 50px 0;
+    position: relative;
+    font-weight: 700;
+  }
+
+  &__title-link {
+    position: absolute;
+    right: 3px;
+
+    svg {
+      width: 50px;
+      height: 16px;
+      fill: #202020;
+      transition: fill .6s, transform .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+      
+      &:hover {
+        fill: #01ac6a;
+      }
+    }
+  }
+
+  &__list-hider {
+    overflow: hidden;
+  }
+
+  &__list {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+  }
+
+  &__controls {
+    background-color: #202020;
+    bottom: 0;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 36px;
+    place-items: center;
+    position: absolute;
+    right: 0;
+    width: 196px;
+    
+    button {
+      background-color: transparent;
+      height: 12px;
+      width: 38px;
+
+      svg {
+        fill: white;
+      }
+    }
+  }
+
+  &__controls-previous {
+    transform: scaleX(-1);
+  }
+
+  &__controls-counter {
+    color: white;
+    font-family: Gilroy-Regular;
+    font-size: 18px;
+
+    i {
+      color: #01AC6A;
+      font-style: normal;
+    }
+  }
+}
+
+@media (max-width: 1439px) {
+  .blogs {
+    padding: 33px 2.4% 0 2.9%;
+    margin: 0 0 78px 5.5%;
+
+    &__title {
+      font-size: 44px;
+      margin: 0 0 29px;
+    }
+    
+    &__title-link {
+      svg {
+        width: 30px;
+        height: 9.6px;
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .blogs {
+    &__controls {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .blogs {
+    margin-left: 3%;
+    &__list {
+      > * {
+        width: 50%;
+      }
+
+      > :nth-child(2) {
+        margin-right: 0;
+      }
+
+      > :last-child {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .blogs {
+    margin-left: 3%;
+    padding: 28px 2.7% 0 5.4%;
+    margin-bottom: 90px;
+
+    &__title {
+      font-size: 34px;
+      margin: 0 0 30px;
+    }
+
+    &__title-link {
+      top: -3px;
+    }
+
+    &__list {
+      width: 300vw;
+      height: 65%;
+    }
+
+    &__list-hider {
+      height: 654px;
+    }
+  }
+}

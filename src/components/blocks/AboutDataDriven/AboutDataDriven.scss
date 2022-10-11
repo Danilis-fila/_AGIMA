@@ -1,0 +1,151 @@
+.about-data-driven {
+  padding: 86px 3.3% 86px 3.5%;
+  margin: 0 0 190px 5.5%;
+  background-color: #fff;
+  letter-spacing: .01em;
+
+  &__title {
+    font-family: 'Gilroy-Medium';
+    max-width: 1160px;
+    font-size: 30px;
+    line-height: 1.6;
+    font-weight: 700;
+    margin-bottom: 53px;
+  }
+
+  &__wrap {
+    display: flex;
+  }
+
+  &__text {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 33%;
+    padding: 0 10% 0 0;
+    font-size: 19px;
+    line-height: 150%;
+    font-weight: 600;
+
+    &:nth-child(1) {
+
+      a:hover {
+        color: #202020;
+        transition: color .6s, transform 1s cubic-bezier(.075, .82, .165, 1);
+      }
+    }
+
+    &:nth-child(2) {
+      padding: 5px 0 0 5%;
+    }
+
+    &:nth-child(3) {
+      padding: 0 0 0 5.5%;
+    }
+
+    a {
+      color: #01AC6A;
+    }
+  }
+
+  &__img {
+    width: 172px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 1439px) {
+  .about-data-driven {
+    margin: 60px 0 140px 5.5%;
+    padding: 60px 2.5% 60px 3.1%;
+    
+    &__text {
+      font-size: 15px;
+      line-height: 146.6%;
+
+      &:nth-child(1) {
+        min-width: 35%;
+        padding: 0;
+      }
+  
+      &:nth-child(2) {
+        padding: 5px 0 0 49px;
+      }
+  
+      &:nth-child(3) {
+        padding: 4px 0 0 68px;
+      }
+    }
+
+    &__img {
+      width: 137px;
+      height: 20px;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .about-data-driven {
+    margin-left: 3%;
+    margin-bottom: 101px;
+    padding: 60px 3.3% 60px 4%;
+
+    &__title {
+      margin-bottom: 40px;
+      font-size: 18px;
+    }
+
+    &__text {
+      font-size: 14px;
+
+      &:nth-child(1) {
+        min-width: 35%;
+        padding: 0;
+      }
+  
+      &:nth-child(2) {
+        padding: 0px 0 0 51px;
+      }
+  
+      &:nth-child(3) {
+        padding: 0px 0px 0 57px;
+      }
+    }
+
+    &__img {
+      width: 117px;
+      height: 20px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .about-data-driven {
+    margin-top: 38px;
+    margin-bottom: 88px;
+    padding: 38px 0 38px 5.4%;
+
+    &__title {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    &__text {
+      display: block;
+      width: 80%;
+      margin: 0 0 36px;
+
+      &:nth-child(2), &:nth-child(3) {
+        padding: 0 0 0 11px;
+        width: 50%;
+        display: inline-block;
+        margin: 0;
+      }
+    }
+
+
+    &__wrap {
+      display: block;
+    }
+
+  }
+}

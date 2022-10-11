@@ -1,0 +1,177 @@
+@mixin footerIcon($bg-image, $bg-image-hover) {
+  background: url($bg-image) no-repeat center;
+
+  &:hover {
+    background: url($bg-image-hover) no-repeat center;
+
+    transition: background-image 0.6s, transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+}
+
+.footer {
+  height: 262px;
+  padding: 70px 3.1% 0 9%;
+  background-color: #01AC6A;
+  position: relative;
+  z-index: 1;
+
+  &__links {
+    display: flex;
+  }
+
+  &__link {
+    font-size: 16px;
+    font-family: Gilroy-Bold;
+    margin: 0 3.19% 0 0;
+    white-space: nowrap;
+
+    a {
+      color: #fff;
+
+      &:hover {
+        color: #202020;
+        transition: color 0.8s, transform 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+    }
+  }
+
+  &__phone {
+    display: none;
+    font-family: Gilroy-Bold;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  &__info {
+    font-family: 'Gilroy-Bold';
+    position: absolute;
+    bottom: 0;
+    bottom: 75px;
+
+    small {
+      font-size: 12px;
+    }
+
+    address {
+      display: inline;
+      font-style: normal;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    position: absolute;
+    right: 47px;
+    top: 58px;
+  }
+
+  &__icon {
+    margin: 0 0 0 18px;
+
+    a {
+      width: 20px;
+      height: 18px;
+      display: block;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--world {
+      @include footerIcon('../../../../public/images/footer/world.svg', '../../../../public/images/footer/world-hover.svg')
+    }
+
+    &--behance {
+      @include footerIcon('../../../../public/images/footer/behance.svg', '../../../../public/images/footer/behance-hover.svg')
+    }
+
+    &--vk {
+      @include footerIcon('../../../../public/images/footer/vk.svg', '../../../../public/images/footer/vk-hover.svg')
+    }
+
+    &--tg {
+      @include footerIcon('../../../../public/images/footer/tg.svg', '../../../../public/images/footer/tg-hover.svg')
+    }
+
+    &--habr {
+      @include footerIcon('../../../../public/images/footer/habr.svg', '../../../../public/images/footer/habr-hover.svg')
+    }
+
+    &--v {
+      @include footerIcon('../../../../public/images/footer/v.svg', '../../../../public/images/footer/v-hover.svg')
+    }
+
+    &--twitter {
+      @include footerIcon('../../../../public/images/footer/twitter.svg', '../../../../public/images/footer/twitter-hover.svg')
+    }
+
+    &--youtube {
+      @include footerIcon('../../../../public/images/footer/youtube.svg', '../../../../public/images/footer/youtube-hover.svg')
+    }
+  }
+}
+
+@media (max-width: 1439px) {
+  .footer {
+    height: 202px;
+    padding: 60px 2.44140625% 0 8.7890625%;
+
+    &__link {
+      font-size: 12px;
+      margin-right: 32px;
+    }
+
+    &__info {
+      font-size: 12px;
+    }
+
+    &__icons {
+      right: 47px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    &__icons {
+      bottom: 35px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    height: fit-content;
+    padding-bottom: 71px;
+
+    &__links {
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+      grid-auto-flow: column;
+      gap: 16px;
+      margin-bottom: 57px;
+
+      :nth-child(3) {
+        grid-row: span 2;
+      }
+    }
+
+    &__icons {
+      position: static;
+      justify-content: space-between;
+      margin-right: 20px;
+    }
+
+    &__icon {
+      margin-left: 0;
+    }
+
+    &__phone {
+      display: block;
+    }
+
+    &__info {
+      position: static;
+      margin-bottom: 37px;
+    }
+  }
+}

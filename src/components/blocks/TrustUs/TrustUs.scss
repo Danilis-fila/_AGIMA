@@ -1,0 +1,238 @@
+.trust-us {
+  margin: 0 0 103px 5.5%;
+
+  &__title {
+    font-size: 35px;
+    line-height: 148.5714285714%;
+    margin: 0 3.3088235294% 94px 3.5294117647%;
+    padding: 0 30% 0 0;
+    position: relative;
+
+    a svg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-top: 20px;
+      width: 50px;
+      height: 16px;
+      transition: fill .6s, transform .6s cubic-bezier(.075, .82, .165, 1);
+
+      &:hover {
+        fill: #01AC6A;
+      }
+    }
+  }
+
+  &__ratings {
+    display: flex;
+    margin: 0 0 0 3.7%;
+  }
+
+  &__rating-item {
+    display: flex;
+    width: 33.33%;
+  }
+
+  &__rating-value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 25px 0 0;
+    width: 147px;
+    height: 147px;
+    font-size: 80px;
+    font-family: "NHaasGroteskDSStd-65Md";
+    color: #01AC6A;
+    background-image: url('https://www.agima.ru/local/markup/build/assets/img/svg/wreath-gray.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__rating-info {
+    margin: 10px 0 0 0;
+  }
+
+  &__rating-text {
+    padding: 24px 0 17px;
+
+    span {
+      margin: 0 10px 0 0;
+      color: #92969a;
+    }
+  }
+
+  &__rating-icon {
+    margin: -9px 0 0 0;
+  }
+
+  &__rating-desc {
+    max-width: 186px;
+    font-size: 19px;
+    line-height: 121%;
+    font-weight: 600;
+  }
+}
+
+.trust-us__ratings .trust-us__rating-item:nth-child(2) {
+  padding: 0 0 0 35px;
+}
+
+.trust-us__ratings .trust-us__rating-item:nth-child(3) {
+  padding: 0 0 0 50px;
+
+  .trust-us__rating-text {
+    margin: -7px 0 0 0;
+  }
+}
+
+@media (max-width: 1439px) {
+  .trust-us {
+    margin-bottom: 87px;
+
+    &__title {
+      padding: 0 20% 0 0;
+      font-size: 27px;
+      line-height: 148%;
+      margin: 0 2.5% 74px 3%;
+
+      a svg {
+        width: 30px;
+        height: 9.6px;
+      }
+    }
+
+    &__rating-info {
+      margin: 0px 0 0 0;
+    }
+
+    &__rating-value {
+      background-size: contain;
+      width: 108px;
+      height: 108px;
+      font-size: 64px;
+      flex-shrink: 0;
+      margin: 0 15px 0 0;
+    }
+
+    &__rating-text {
+      font-size: 12px;
+      padding: 25px 0 13px;
+
+      span {
+        margin: 0 6px 0 0;
+      }
+    }
+
+    &__rating-desc {
+      font-size: 15px;
+    }
+  }
+
+  .trust-us__ratings .trust-us__rating-item:nth-child(2) {
+    padding: 0 0 0 19px;
+  }
+  
+  .trust-us__ratings .trust-us__rating-item:nth-child(3) {
+    padding: 0 0 0 25px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .trust-us {
+    margin: 0 0 81px 3%;
+    
+    &__title {
+      padding: 0 10% 0 0;
+      font-size: 24px;
+      line-height: 150%;
+      margin: 0 3.3% 41px 4%;
+      
+      a svg {
+        margin-top: 12px;
+      }
+    }
+
+    &__rating-value {
+      background-size: contain;
+      width: 86px;
+      height: 86px;
+      font-size: 50px;
+      margin: 0 12px 0 0;
+    }
+
+    &__rating-text {
+      font-size: 10px;
+      padding: 25px 0 8px;
+
+      span {
+        margin: 0 5px 0 0;
+      }
+    }
+
+    &__rating-desc {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .trust-us {
+
+    &__title {
+      padding: 0;
+      font-size: 18px;
+      line-height: 150%;
+      margin: 0 0 35px 5.4%;
+
+      a {
+        visibility: hidden;
+      }
+    }
+
+    &__ratings {
+      flex-direction: column;
+      width: 100%;
+      margin: 0 0 80px 12.3%;
+    }
+
+    &__rating-value {
+      background-size: contain;
+      width: 108px;
+      height: 108px;
+      font-size: 64px;
+      margin: 0 15px 0 0;
+    }
+
+    &__rating-text {
+      font-size: 12px;
+      padding: 15px 0 14px;
+
+      span {
+        margin: 0 5px 0 0;
+      }
+    }
+
+    &__rating-desc {
+      font-size: 15px;
+      font-family: Gilroy-Bold;
+      display: contents;
+    }
+
+    &__rating-info {
+      width: 100%;
+    }
+
+    &__rating-item {
+      width: 55%;
+
+      &.trust-us__rating-item.trust-us__rating-item {
+        padding: 0;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 21px;
+      }
+    }
+  }
+}
+

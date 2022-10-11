@@ -1,0 +1,51 @@
+.main {
+  position: relative;
+  display: block;
+  z-index: 3;
+  width: 94%;
+  height: auto;
+  margin-top: 96vh;
+  background-color: #f4f7f7;
+  overflow: hidden;
+
+  &__title {
+    padding: calc(92px + 8vh) 25.6% 80px 9%;
+    font-size: 35px;
+    line-height: 151.4285714286%;
+    font-family: "Gilroy-Bold";
+  }
+}
+
+@media (max-width: 1439px) {
+  .main {
+    &__title {
+      padding: calc(60px + 8vh) 18.4% 50px 8.7%;
+      font-size: 27px;
+      line-height: 151.8%;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .main {
+    &__title {      
+      font-family: 'Gilroy-SemiBold';
+      padding: 70px 5.9% 50px 7.1%;
+      font-size: 24px;
+      line-height: 154%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .main {
+    margin-top: -14vh;
+
+    &__title {      
+      font-family: 'Gilroy-SemiBold';
+      padding: 48px 5.3% 36px 8%;
+      font-size: 18px;
+      line-height: 1.54;
+    }
+  }
+}

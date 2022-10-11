@@ -1,0 +1,145 @@
+.blog {
+  padding-bottom: 35px;
+  width: 33.3%;
+  margin: 0 3.1% 0 0;
+
+  &__img {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 267px;
+    background: none no-repeat 50% 50%;
+    background-size: cover;
+    background-position: center;
+    margin: 0 0 36px 0;
+    filter: grayscale(1);
+    transition: filter .8s, transform .8s cubic-bezier(.785, .135, .15, .86);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: #202020;
+      opacity: .7;
+      transition: background .8s, transform .8s cubic-bezier(.785, .135, .15, .86);
+    }
+
+    &:hover {
+      filter: none;
+      transition: filter .8s, transform .8s cubic-bezier(.785, .135, .15, .86);
+
+      &::after {
+        content: '';
+        background: transparent;
+        transition: background .8s, transform .8s cubic-bezier(.785, .135, .15, .86);
+      }
+
+    }
+  }
+
+  &__info {
+    margin: 0 0 28px;
+    color: #92969a;
+    font-size: 16px;
+
+    a {
+      margin: 0 20px 0 0;
+      color: #01ac6a;
+
+      &:hover {
+        color: #202020;
+        transition: color 1s, transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+    }
+  }
+
+  &__description {
+    display: block;
+    font-size: 19px;
+    line-height: 159%;
+    margin: 0 0 27px 0;
+    font-weight: 500;
+    font-family: 'Gilroy-Medium';
+
+    &:hover {
+      color: #01AC6A;
+      transition: color .6s, transform .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+  }
+
+  &__author {
+    display: flex;
+    height: 34px;
+  }
+
+  &__photo {
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    margin: 0 8px 0 0;
+    background: none no-repeat 50% 50%;
+    background-size: cover;
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+
+    &:hover {
+      color: #01AC6A;
+      transition: color .5s, transform .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+  }
+}
+
+@media (max-width: 1439px) {
+  .blog {
+    &__img {
+      height: 255px;
+      margin-bottom: 30px;
+      &::after {
+        content: '';
+        position: absolute;
+        height: 100%;
+      }
+    }
+
+    &__info {
+      font-size: 12px;
+      margin-bottom: 22px;
+    }
+
+    &__description  {
+      font-size: 15px;
+      margin-bottom: 17px;
+      display: block;
+    }
+
+    
+    &__name {
+      font-size: 12px; 
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .blog {
+    margin-right: 1px;
+
+    &__controls {
+      margin-right: 2.7%;
+    }
+
+
+
+
+
+    &__img {
+      height: 109%;
+    }
+  }
+}

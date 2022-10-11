@@ -1,0 +1,42 @@
+.companies {
+  display: flex;
+
+  &__icon {
+    opacity: .3;
+    display: inline-block;
+    vertical-align: top;
+    width: 33.33%;
+    height: 145px;
+    background: none no-repeat 50% 50%;
+    background-size: 40%;
+    object-fit: contain;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 1439px) {
+  .companies {
+    &__icon {
+      background-size: 55%;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .companies {
+    &__icon {
+      background-size: 45%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .companies {
+    &__icon {
+      background-size: 65%;
+    }
+  }
+}

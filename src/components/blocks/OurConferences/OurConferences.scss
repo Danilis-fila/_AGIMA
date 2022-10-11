@@ -1,0 +1,58 @@
+.our-conferences {
+  margin: 45px 0 90px 5.8%;
+  background-color: transparent;
+  font-family: "Gilroy-Medium";
+
+  &__header {
+    padding: 40px 3.3% 30px 3.6%;
+    background-color: #fff;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 1.53;
+    font-weight: 700;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: end;
+    font-size: 16px;
+    color: #01AC6A;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 1439px) {
+  .our-conferences {
+    margin: 30px 0 80px 5.5%;
+
+    &__link {
+      font-size: 12px;
+    }
+
+    &__header {
+      padding: 30px 2.5% 25px 3.1%;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .our-conferences {
+    margin: 30px 0 70px 3%;
+
+    &__header {
+      padding: 25px 3.3% 20px 4%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .our-conferences {
+    margin: 30px 0 20px 3%;
+
+    &__link {
+      justify-content: start;
+    }
+  }
+}
